@@ -1,0 +1,12 @@
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2011-11-23 12:23:22
+project --topLevelPackage com.rentistry --projectName rentistry --java 6
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log closed at 2011-11-23 12:23:23
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2011-11-23 12:23:27
+hint
+jpa setup --database MYSQL --provider HIBERNATE 
+hint
+hint
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log closed at 2011-11-23 17:09:24
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2011-11-25 14:34:59
+hint
+database properties list
