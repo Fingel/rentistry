@@ -10,3 +10,47 @@ hint
 // Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2011-11-25 14:34:59
 hint
 database properties list
+help
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log closed at 2011-11-25 14:49:56
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2011-11-25 14:50:06
+help
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log closed at 2011-11-25 14:50:40
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2011-11-25 14:52:06
+entity --class ~.domain.City
+field string --fieldName name
+// [failed] field string --fieldName state
+field string --fieldName stateCode
+field number --fieldName zip --type java.lang.Long
+field number --fieldName latitude --type double
+field number --fieldName longitude --type double
+field string --fieldName county
+entity --class ~.domain.Region
+field set --fieldName cities --type com.rentistry.domain.City
+field string --fieldName name
+entity --class ~.domain.Account
+field reference --fieldName defaultRegion --type com.rentistry.domain.Region
+field string --fieldName firstName
+entity --class ~.domain.Item
+field reference --fieldName region --type ~.domain.Region
+field reference --fieldName providedBy --type ~.domain.Account
+field set --fieldName requestedBy --type ~.domain.Account
+field boolean --fieldName available
+field date --fieldName startDate --type java.util.Date
+field date --fieldName endDate --type java.util.Date
+field string --fieldName description
+field string --fieldName name --notNull
+field number --fieldName price --type int
+field number --fieldName priceInterval --type int
+entity --class ~.domain.ItemTag
+field string --fieldName text
+focus --class ~.domain.Item
+field set --fieldName tags --type ~.domain.ItemTag
+focus --class ~.domain.ItemTag
+field set --fieldName items --type ~.domain.Item --mappedBy tags
+focus --class ~.domain.Region
+field set --fieldName accounts --type ~.domain.Account --cardinality ONE_TO_MANY --mappedBy "defaultRegion"
+field set --fieldName items --type ~.domain.Item --cardinality ONE_TO_MANY --mappedBy "region"
+field set --fieldName providing --type ~.domain.Item --cardinality ONE_TO_MANY --mappedBy "providedBy"
+focus --class ~.domain.Account
+field set --fieldName providing --type ~.domain.Item --cardinality ONE_TO_MANY --mappedBy "providedBy"
+field set --fieldName requesting --type ~.domain.Item
