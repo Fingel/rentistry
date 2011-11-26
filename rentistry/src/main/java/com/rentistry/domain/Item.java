@@ -25,7 +25,7 @@ public class Item {
     @ManyToOne
     private Account providedBy;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "requesting")
     private Set<Account> requestedBy = new HashSet<Account>();
 
     private Boolean available;

@@ -10,6 +10,7 @@ import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.tostring.RooToString;
 
+
 @RooJavaBean
 @RooToString
 @RooEntity
@@ -23,4 +24,8 @@ public class Account {
 
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<Item> requesting = new HashSet<Item>();
+    
+    public String toString(){
+    	return this.defaultRegion.getCities().iterator().next().getName();
+    }
 }
