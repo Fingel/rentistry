@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_rentistry_domain_City" items="${citys}" z="Ig5S8IG8ZuaqWpwlwz2AG/jGY9g=">
+        <table:table data="${citys}" id="l_com_rentistry_domain_City" path="/citys" z="2WBCKsEdJ0YGiX1vkke3miRjoi0=">
+            <table:column id="c_com_rentistry_domain_City_name" property="name" z="6L8KZpIOszZyz/IKjCP1qFDatVY="/>
+            <table:column id="c_com_rentistry_domain_City_stateCode" property="stateCode" z="RCqlupLxrgzuvh5oGrpFGP1RqOU="/>
+            <table:column id="c_com_rentistry_domain_City_zip" property="zip" z="UDhDxQsKlDph0aPOqEiIlKBJF30="/>
+            <table:column id="c_com_rentistry_domain_City_latitude" property="latitude" z="BQYj3r5JqlwlYKBFj47cNjdWbyo="/>
+            <table:column id="c_com_rentistry_domain_City_longitude" property="longitude" z="lPpE1oeECowAkt8omYtxDks39v8="/>
+            <table:column id="c_com_rentistry_domain_City_county" property="county" z="QHHwKohyg5sLqhz33wKdrpQXWxM="/>
+        </table:table>
+    </page:list>
+</div>

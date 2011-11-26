@@ -54,3 +54,9 @@ field set --fieldName providing --type ~.domain.Item --cardinality ONE_TO_MANY -
 focus --class ~.domain.Account
 field set --fieldName providing --type ~.domain.Item --cardinality ONE_TO_MANY --mappedBy "providedBy"
 field set --fieldName requesting --type ~.domain.Item
+test integration
+web mvc setup
+web mvc all --package ~.web
+// [failed] perform tests 
+// [failed] perform tests
+security setup

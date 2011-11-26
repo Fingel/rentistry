@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_rentistry_domain_City" object="${city}" path="/citys" z="PXau/fUputB6/bHYezUU/PeuWxc=">
+        <field:display field="name" id="s_com_rentistry_domain_City_name" object="${city}" z="OGkC+oT20UQwOl9VHpK9+8ms6ko="/>
+        <field:display field="stateCode" id="s_com_rentistry_domain_City_stateCode" object="${city}" z="MtO8+GzgEOEZOEDVZYgbVkPJftg="/>
+        <field:display field="zip" id="s_com_rentistry_domain_City_zip" object="${city}" z="e60lFpLHN5mwqipwZH5Esn39pDA="/>
+        <field:display field="latitude" id="s_com_rentistry_domain_City_latitude" object="${city}" z="wk7fRi1fjhUv/v2qPPv+nfWPWvI="/>
+        <field:display field="longitude" id="s_com_rentistry_domain_City_longitude" object="${city}" z="z+91vH67rvmr2eeFrR6o+hNZgDU="/>
+        <field:display field="county" id="s_com_rentistry_domain_City_county" object="${city}" z="nA0J5Qq1paipeX43yvFdvdXFNr4="/>
+    </page:show>
+</div>

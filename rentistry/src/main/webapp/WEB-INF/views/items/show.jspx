@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_rentistry_domain_Item" object="${item}" path="/items" z="Oh8Wn2AYfQBzbkvb2fXgSTLnC9M=">
+        <field:display field="region" id="s_com_rentistry_domain_Item_region" object="${item}" z="JF/Vkwh8OSY0Xm8AFV8hIo8L4U4="/>
+        <field:display field="providedBy" id="s_com_rentistry_domain_Item_providedBy" object="${item}" z="FrdTJn9opPx8woA+LPnAvHTRbnc="/>
+        <field:display field="requestedBy" id="s_com_rentistry_domain_Item_requestedBy" object="${item}" z="IGem+UBwYGC/wS+TWpkGONA1rxA="/>
+        <field:display field="available" id="s_com_rentistry_domain_Item_available" object="${item}" z="dQKdWtUOA+T1K+bcZms/pQOopeY="/>
+        <field:display date="true" dateTimePattern="${item_startdate_date_format}" field="startDate" id="s_com_rentistry_domain_Item_startDate" object="${item}" z="j59sl1wz99k6B4jFKeZWUEkyr40="/>
+        <field:display date="true" dateTimePattern="${item_enddate_date_format}" field="endDate" id="s_com_rentistry_domain_Item_endDate" object="${item}" z="jF6RZbJBTEuDZde65/s1hFqeUQo="/>
+        <field:display field="description" id="s_com_rentistry_domain_Item_description" object="${item}" z="a1vmasMPX0KLx1Ph7WpDXPdGII8="/>
+        <field:display field="name" id="s_com_rentistry_domain_Item_name" object="${item}" z="VkGdGFYtyUrLPswRXThBt2Ipdks="/>
+        <field:display field="price" id="s_com_rentistry_domain_Item_price" object="${item}" z="dic/wvlHs4lvr1L9pIfWheoFRZk="/>
+        <field:display field="priceInterval" id="s_com_rentistry_domain_Item_priceInterval" object="${item}" z="voGmUbEUh9cLVs77EuPiKcjBjCQ="/>
+        <field:display field="tags" id="s_com_rentistry_domain_Item_tags" object="${item}" z="D1+oyfdNXWUnJGbXL1NZXogrkrg="/>
+    </page:show>
+</div>

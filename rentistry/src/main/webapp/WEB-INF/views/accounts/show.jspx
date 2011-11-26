@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_rentistry_domain_Account" object="${account}" path="/accounts" z="+roIwCXBGrJ3j/VHZqWv7mCIVkg=">
+        <field:display field="defaultRegion" id="s_com_rentistry_domain_Account_defaultRegion" object="${account}" z="7BoRgQ0WOxs6AtyXSNP2xSSATlo="/>
+        <field:display field="requesting" id="s_com_rentistry_domain_Account_requesting" object="${account}" z="AaLScue6GRGtwELBNVCqUinIRzw="/>
+    </page:show>
+</div>
