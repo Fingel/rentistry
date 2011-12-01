@@ -4,8 +4,8 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_com_rentistry_domain_Item" object="${item}" path="/items" z="Oh8Wn2AYfQBzbkvb2fXgSTLnC9M=">
         <field:display field="region" id="s_com_rentistry_domain_Item_region" object="${item}" z="JF/Vkwh8OSY0Xm8AFV8hIo8L4U4="/>
-<!--         <field:display field="providedBy[0]" id="s_com_rentistry_domain_Item_providedBy" object="${item}" z="FrdTJn9opPx8woA+LPnAvHTRbnc="/> -->
-<!--         <field:display field="requestedBy[0]" id="s_com_rentistry_domain_Item_requestedBy" object="${item}" z="IGem+UBwYGC/wS+TWpkGONA1rxA="/> -->
+        <!--         <field:display field="providedBy[0]" id="s_com_rentistry_domain_Item_providedBy" object="${item}" z="FrdTJn9opPx8woA+LPnAvHTRbnc="/> -->
+        <!--         <field:display field="requestedBy[0]" id="s_com_rentistry_domain_Item_requestedBy" object="${item}" z="IGem+UBwYGC/wS+TWpkGONA1rxA="/> -->
 		Provided by: ${item.providedBy}
 		
         <field:display field="available" id="s_com_rentistry_domain_Item_available" object="${item}" z="dQKdWtUOA+T1K+bcZms/pQOopeY="/>
@@ -16,5 +16,7 @@
         <field:display field="price" id="s_com_rentistry_domain_Item_price" object="${item}" z="dic/wvlHs4lvr1L9pIfWheoFRZk="/>
         <field:display field="priceInterval" id="s_com_rentistry_domain_Item_priceInterval" object="${item}" z="voGmUbEUh9cLVs77EuPiKcjBjCQ="/>
         <field:display field="tags" id="s_com_rentistry_domain_Item_tags" object="${item}" z="D1+oyfdNXWUnJGbXL1NZXogrkrg="/>
+        <field:display field="providedBy" id="s_com_rentistry_domain_Item_providedBy" render="false" object="${item}" z="user-managed"/>
+        <field:display field="requestedBy" id="s_com_rentistry_domain_Item_requestedBy" render="false" object="${item}" z="user-managed"/>
     </page:show>
 </div>

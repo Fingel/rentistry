@@ -2,8 +2,12 @@
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
 
-  <definition extends="default" name="index">
+  <definition extends="public" name="index">
     <put-attribute name="body" value="/WEB-INF/views/index.jspx"/>
+  </definition>
+  
+  <definition extends="admin" name="adminindex">
+    <put-attribute name="body" value="/WEB-INF/views/index-template.jspx"/>
   </definition>
 
   <definition extends="public" name="dataAccessFailure">

@@ -2,13 +2,42 @@
   <jsp:directive.page contentType="text/html;charset=UTF-8" />
   <jsp:output omit-xml-declaration="yes" />
   <spring:message var="app_name" code="application_name" htmlEscape="false" />
-  <spring:message var="title" code="welcome_titlepane" arguments="${app_name}" htmlEscape="false" />
   <util:panel id="title" title="${title}">
-    <h3>
-      <spring:message code="welcome_h3" arguments="${app_name}" />
-    </h3>
-    <p>
-      <spring:message code="welcome_text" />
-    </p>
+  <div id="fullwrap">
+  	<div id="splashnav">
+		<h3>What are you looking for today?</h3>
+	</div>
+	<div id="splaswrap">
+		<input placeholder="e.g Lawnmower" class="xlarge"/>
+	</div>
+	<div id="contentwrap">
+	
+	 <div id="contenthead">
+	 
+	  <h1>Latest Items</h1>
+	 
+	 </div>
+	
+	 <div id="contentstuff">
+	
+		<!-- MAIN CONTENT ITEMS START -->
+	
+		<div id="divend">
+	
+			
+		</div>
+			
+		<!-- MAIN CONTENT ITEMS END -->
+	
+	 </div>
+	 
+	</div>
+	
+	<!-- content ends -->
+	
+	<div id="contentclear"></div>	
+	
+ </div>
+  
   </util:panel>
 </div>

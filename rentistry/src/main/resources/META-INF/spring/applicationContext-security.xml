@@ -17,6 +17,7 @@
         <intercept-url pattern="/citys/**" access="hasRole('ROLE_ADMIN')"/>
         <intercept-url pattern="/regions/**" access="hasRole('ROLE_ADMIN')"/>
         <intercept-url pattern="/itemtags/**" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
         <intercept-url pattern="/resources/**" access="permitAll" />
         <intercept-url pattern="/**" access="permitAll" />
     </http>

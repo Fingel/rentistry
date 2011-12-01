@@ -5,11 +5,13 @@
     <page:list id="pl_com_rentistry_domain_Item" items="${items}" z="wvESXVVtz8JSdEQSjcgKyYX5veE=">
         <table:table data="${items}" id="l_com_rentistry_domain_Item" path="/items" z="w3jKkL6jyyvUaSaZ32VSAo+FoJo=">
             <table:column id="c_com_rentistry_domain_Item_region" property="region" z="rOEY4uWDhWIwE+Vp/OAefKEVRmQ="/>
-<!--             <table:column id="c_com_rentistry_domain_Item_providedBy" property="providedBy"  z="Xk2Fj0UlZbLN/Lvnm4u0Tu3u6NE="/> -->
-<!--             <table:column id="c_com_rentistry_domain_Item_requestedBy" property="requestedBy" z="Z4MtbqxHzBrl2rhftFJoEBapFsc="/> -->
+            <!--             <table:column id="c_com_rentistry_domain_Item_providedBy" property="providedBy"  z="Xk2Fj0UlZbLN/Lvnm4u0Tu3u6NE="/> -->
+            <!--             <table:column id="c_com_rentistry_domain_Item_requestedBy" property="requestedBy" z="Z4MtbqxHzBrl2rhftFJoEBapFsc="/> -->
             <table:column id="c_com_rentistry_domain_Item_available" property="available" z="loYde+kpvVgF3JqEo9MbjGao4Fg="/>
             <table:column date="true" dateTimePattern="${item_startdate_date_format}" id="c_com_rentistry_domain_Item_startDate" property="startDate" z="mCU6Yz4BggSvJ2SEPDdXq6jRvpc="/>
             <table:column date="true" dateTimePattern="${item_enddate_date_format}" id="c_com_rentistry_domain_Item_endDate" property="endDate" z="JbifqOXiI03XPzx15nmutLzxxKs="/>
+            <table:column id="c_com_rentistry_domain_Item_providedBy" property="providedBy" render="false" z="user-managed/>
+            <table:column id="c_com_rentistry_domain_Item_requestedBy" property="requestedBy" render="false" z="user-managed"/>
         </table:table>
     </page:list>
 </div>
