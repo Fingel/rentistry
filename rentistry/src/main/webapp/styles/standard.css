@@ -2,7 +2,6 @@
 
 body
 {
-	text-align: center;
 	margin: 0;
 	padding: 0;
 	background: #fcfdfc url("../images/bgloop.png") top left repeat-x;
@@ -112,7 +111,6 @@ h3
 
 #wrapper
 {
-	text-align: center;
 	margin-top: 11px;
 	margin-left: auto; 
 	margin-right: auto;
@@ -560,6 +558,7 @@ h3
 	height: 39px;
 	background: url("../images/buckettop.png") top left repeat-x;
 	margin-bottom: 12px;
+	text-align: center;
 }
 
 #contentstuff
@@ -1030,6 +1029,7 @@ fieldset th {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	text-shadow: 1px 1px 1px #b1b1b1;
+	text-align: center;
 }
 
 #title_text {
@@ -1037,4 +1037,18 @@ fieldset th {
 	float:left;
 	color: #4bb345;
 	font-size: 24px;
+}
+
+.dijitTooltipContainer {
+	border: 0px solid #000 !important;
+	font-size: 14px !important;
+	color: #4bb345 !important;
+/* 	text-shadow: 1px 1px 1px #000 !important; */
+	background: none repeat scroll !important;
+	padding-left: 4px;
+}
+
+.dijitReset {
+		background: none repeat scroll !important;
+	
 }
