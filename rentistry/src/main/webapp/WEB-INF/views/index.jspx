@@ -5,10 +5,12 @@
   <util:panel id="title" title="${title}">
   <div id="fullwrap">
   	<div id="splashnav">
-		<h3>What are you looking for today?</h3>
+		<a href="">Home</a> | <a href="">Browse</a> | <a href="">About</a> 
 	</div>
 	<div id="splaswrap">
-		<input placeholder="e.g Lawnmower" class="xlarge"/>
+		<div id ="questionIndex">What are you looking for today?<br/>
+			<input placeholder="lawnmower, kayak..." id="indexinput"/>
+		</div>
 	</div>
 	<div id="contentwrap">
 	

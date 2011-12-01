@@ -7,7 +7,7 @@ body
 	padding: 0;
 	background: #fcfdfc url("../images/bgloop.png") top left repeat-x;
 	line-height: 1;
-	font-family: Verdana;
+	font-family: Helvetica;
 	font-size: 14px;
 	color: #000000;
 }
@@ -22,6 +22,7 @@ a
 
 a:hover
 {
+	text-decoration: none;
 	color: #336630;
 }
 
@@ -78,8 +79,6 @@ h3
 #titleimg
 {
 	float: left;
-	width: 355px;
-	height: 84px;
 	border: none;
 }
 
@@ -100,7 +99,6 @@ h3
 	text-decoration: none;
 	line-height: 1.5;
 	font-size: 12px;
-	border-bottom: 1px solid #40673e;
 	color: #4bb345;
 }
 
@@ -348,12 +346,15 @@ h3
 
 #splashnav
 {
+	background-color: #3B3B3B;
+    color: #CFD3D5;
 	position: relative;
 	margin-top: 11px;
 	margin-left: 11px;
 	margin-right: 11px;
-	padding-top: 2px;
-	text-align: center;
+	padding-top: 5px;
+	padding-left: 10px;
+	text-align: left;
 	height: 30px;
 	font-family: Helvetica;
 	font-size: 22px;
@@ -394,14 +395,12 @@ h3
 	font-weight: bold;
 	color: #4bb345;
 	margin-top: -3px;
-	border-bottom: 1px solid #40673e;
-	line-height: 1.2;
+	text-shadow: 1px 1px 1px #000;
 }
 
 #splashnav a:hover
 {
 	color: #b6ebb3;
-	border-bottom: 1px solid #b6ebb3;
 }
 
 #sptotal
@@ -547,6 +546,7 @@ h3
 	float: left;
 	margin-top: 30px;
 	margin-left: 30px;
+	margin-bottom: 30px;
 	background: #eff0f1 url("../images/bucketbg.png") top left repeat-x;
 	border: solid 1px #c9d8c6;
 	border-top: none;
@@ -1016,4 +1016,25 @@ fieldset th {
 .flag {
 	height: 11px;
 	width: 16px;
+}
+
+#indexinput {
+	width:400px;
+	height: 40px;
+	font-size: 28px;
+	margin-top: 15px;
+}
+
+#questionIndex {
+	font-size: 34px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-shadow: 1px 1px 1px #b1b1b1;
+}
+
+#title_text {
+	padding-top: 34px;
+	float:left;
+	color: #4bb345;
+	font-size: 24px;
 }

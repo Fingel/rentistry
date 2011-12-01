@@ -5,13 +5,30 @@
   <spring:url var="banner" value="/resources/images/title.png" />
   <spring:url var="home" value="/" />
   <spring:url var="login" value="/login"/>
+  <spring:url value="/resources/j_spring_security_logout" var="logout"/>
   <spring:message code="button_home" var="home_label" htmlEscape="false" />
   <div id="titlewrap">
 	  <a href="${home}" name="${fn:escapeXml(home_label)}" title="${fn:escapeXml(home_label)}">
 	    <img src="${banner}" id="titleimg" />
 	  </a>
+	  <span id="title_text">Rentistry</span>
  	 <div id="titlenav">
- 	 <a href="${login}">Login</a>
+ 	 	<c:choose>
+	 	<c:when test="${pageContext['request'].userPrincipal != null}">
+	    <span>
+	      <a href="${logout}">
+	        <spring:message code="security_logout"/>
+	      </a>
+	    </span>
+	  </c:when>
+	  <c:otherwise>
+	  	<span>
+	      <a href="${login}">
+	        <spring:message code="security_login"/> | <a href="${register}">Register</a>
+	      </a>
+	    </span>
+	  </c:otherwise>
+	  </c:choose>
  	 </div> 
   </div>
 </div> 

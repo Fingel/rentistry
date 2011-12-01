@@ -24,5 +24,7 @@
 		    	<tiles:insertAttribute name="footer" ignore="true"/>
 		    </div>
 		</div>
+			<div id="topbg"></div>
+		
 	</body>
 </html>
