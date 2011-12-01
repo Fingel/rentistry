@@ -82,3 +82,11 @@ finder add --finderName findRentUserByUserEmailEquals
 finder add --finderName findRentUsersByUserEmailEquals
 web mvc scaffold --class com.rentistry.domain.RentUser
 web mvc scaffold --class com.rentistry.domain.RentUserController
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2011-12-01 11:58:49
+// [failed] perform eclipse
+exit
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log closed at 2011-12-01 11:59:16
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2011-12-01 11:59:23
+perform eclipse
+exit
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log closed at 2011-12-01 12:02:00
