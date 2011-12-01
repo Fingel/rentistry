@@ -1052,3 +1052,8 @@ fieldset th {
 		background: none repeat scroll !important;
 	
 }
+
+.dijitCheckBoxInput {
+    opacity: 1 !important;
+}
+	

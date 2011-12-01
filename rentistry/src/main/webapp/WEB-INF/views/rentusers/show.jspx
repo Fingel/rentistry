@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_rentistry_domain_RentUser" object="${rentuser}" path="/rentusers" z="tsbxZ03Nc9vGz/Pg6VgPNnAsbjY=">
+        <field:display field="password" id="s_com_rentistry_domain_RentUser_password" object="${rentuser}" z="5mLbuBWp4mqbPaMGewdLKQdsN38="/>
+        <field:display field="enabled" id="s_com_rentistry_domain_RentUser_enabled" object="${rentuser}" z="qFLEy/GggJ716qb/oTiTtDss5bo="/>
+        <field:display field="userEmail" id="s_com_rentistry_domain_RentUser_userEmail" object="${rentuser}" z="2uoqGhYWNyXhx7Cb1ggtjQqZAoY="/>
+        <field:display field="firstName" id="s_com_rentistry_domain_RentUser_firstName" object="${rentuser}" z="H5AblO1XIKHP0v0Wd+UzTm22Ybw="/>
+        <field:display field="lastName" id="s_com_rentistry_domain_RentUser_lastName" object="${rentuser}" z="nzvjNEsfvoIurkjJgadpVsCR6Y4="/>
+        <field:display field="accountExpired" id="s_com_rentistry_domain_RentUser_accountExpired" object="${rentuser}" z="C5glHwFNm0L/+0V8JANcfow83og="/>
+        <field:display field="credentialsExpired" id="s_com_rentistry_domain_RentUser_credentialsExpired" object="${rentuser}" z="OR5xz19c7nzKaVSHrnR4WvUPbYk="/>
+        <field:display field="accountLocked" id="s_com_rentistry_domain_RentUser_accountLocked" object="${rentuser}" z="zadJ8TSgQmZ9Gvqp2y/2xQpL3ZM="/>
+        <field:display field="account" id="s_com_rentistry_domain_RentUser_account" object="${rentuser}" z="SsLNx6fWx+qgoWwv/thi1BRET00="/>
+        <field:display field="grantedAuthorities" id="s_com_rentistry_domain_RentUser_grantedAuthorities" object="${rentuser}" z="PM3UWa/d38b/fNZ5h3KDjNuIVxQ="/>
+    </page:show>
+</div>

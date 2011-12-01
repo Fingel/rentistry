@@ -23,5 +23,9 @@
             <menu:item id="i_item_new" messageCode="global_menu_new" url="/items?form" z="I+/MpOYxZ47XKvsQW1PUi6uC060="/>
             <menu:item id="i_item_list" messageCode="global_menu_list" url="/items?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4RxBMvjr2gUD8qO0DTWmjd1SzS0="/>
         </menu:category>
+        <menu:category id="c_rentuser" z="2RGR1eGjXHg0BSjM+pP/btf0qQ0=">
+            <menu:item id="i_rentuser_new" messageCode="global_menu_new" url="/rentusers?form" z="bV6kRXCJCqUR6yPc8HfiFjn7p7A="/>
+            <menu:item id="i_rentuser_list" messageCode="global_menu_list" url="/rentusers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="HBM2wz+UnMhB2lx/yNNGs3b/RHg="/>
+        </menu:category>
     </menu:menu>
 </div>

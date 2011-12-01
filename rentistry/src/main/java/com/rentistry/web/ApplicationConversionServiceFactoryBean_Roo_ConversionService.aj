@@ -7,6 +7,7 @@ import com.rentistry.domain.City;
 import com.rentistry.domain.Item;
 import com.rentistry.domain.ItemTag;
 import com.rentistry.domain.Region;
+import com.rentistry.domain.RentUser;
 import java.lang.Long;
 import java.lang.String;
 import org.springframework.beans.factory.annotation.Configurable;
@@ -113,6 +114,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<RentUser, String> ApplicationConversionServiceFactoryBean.getRentUserToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.rentistry.domain.RentUser, java.lang.String>() {
+            public String convert(RentUser rentUser) {
+                return new StringBuilder().append(rentUser.getPassword()).append(" ").append(rentUser.getUserEmail()).append(" ").append(rentUser.getFirstName()).append(" ").append(rentUser.getLastName()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, RentUser> ApplicationConversionServiceFactoryBean.getIdToRentUserConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.rentistry.domain.RentUser>() {
+            public com.rentistry.domain.RentUser convert(java.lang.Long id) {
+                return RentUser.findRentUser(id);
+            }
+        };
+    }
+    
+    public Converter<String, RentUser> ApplicationConversionServiceFactoryBean.getStringToRentUserConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.rentistry.domain.RentUser>() {
+            public com.rentistry.domain.RentUser convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), RentUser.class);
+            }
+        };
+    }
+    
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
         registry.addConverter(getCityToStringConverter());
         registry.addConverter(getIdToCityConverter());
@@ -126,6 +151,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getRegionToStringConverter());
         registry.addConverter(getIdToRegionConverter());
         registry.addConverter(getStringToRegionConverter());
+        registry.addConverter(getRentUserToStringConverter());
+        registry.addConverter(getIdToRentUserConverter());
+        registry.addConverter(getStringToRentUserConverter());
     }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {

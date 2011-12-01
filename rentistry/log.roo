@@ -66,3 +66,19 @@ security setup
 // Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2011-11-30 15:45:59
 hint
 email sender setup --hostServer smtp.gmail.com
+// [failed] entity --class ~.domain.User
+entity --class ~.domain.RentUser
+field string --fieldName userEmail
+field string --fieldName firstName
+field string --fieldName lastName
+field string --fieldName password
+field boolean enabled
+field boolean accountExpired
+field boolean credentialsExpired
+field boolean accountLocked
+field reference --fieldName account --type com.rentistry.domain.Account --cardinality ONE_TO_ONE
+finder list 
+finder add --finderName findRentUserByUserEmailEquals
+finder add --finderName findRentUsersByUserEmailEquals
+web mvc scaffold --class com.rentistry.domain.RentUser
+web mvc scaffold --class com.rentistry.domain.RentUserController
