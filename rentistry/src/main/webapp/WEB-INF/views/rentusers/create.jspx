@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_rentistry_domain_RentUser" modelAttribute="rentUser" path="/rentusers" render="${empty dependencies}" z="kU0BC2bxhNbbuxNtJCIC4XBYzjc=">
-        <field:input field="password" id="c_com_rentistry_domain_RentUser_password" z="r2d/mfimkvZAQ39iUmvvukrbtJ0="/>
         <field:checkbox field="enabled" id="c_com_rentistry_domain_RentUser_enabled" z="sVgp1TbdMWMmGLRYOKYvtTWn6BY="/>
         <field:input field="userEmail" id="c_com_rentistry_domain_RentUser_userEmail" z="cUAXiUGX+vOCffX7JGTodJdTRzk="/>
         <field:input field="firstName" id="c_com_rentistry_domain_RentUser_firstName" z="InM6FtTqx3ZFemVmC4ErUy0Sk6Y="/>
@@ -12,7 +11,9 @@
         <field:checkbox field="credentialsExpired" id="c_com_rentistry_domain_RentUser_credentialsExpired" z="CZTQ+raLIWXvxCTy8VcwO3AHZPA="/>
         <field:checkbox field="accountLocked" id="c_com_rentistry_domain_RentUser_accountLocked" z="aVzpNru03y4WU3WLUXHAz0zX11w="/>
         <field:select field="account" id="c_com_rentistry_domain_RentUser_account" itemValue="id" items="${accounts}" path="/accounts" z="+mFFBxy8A4g3hZqOfcsGXDSE/8g="/>
-        <field:input field="grantedAuthorities" id="c_com_rentistry_domain_RentUser_grantedAuthorities" z="7TTIpkBgyXbh4PFgywXkpYGuR0A="/>
+        <field:input field="grantedAuthorities" id="c_com_rentistry_domain_RentUser_grantedAuthorities" render="false" z="7TTIpkBgyXbh4PFgywXkpYGuR0A="/>
+        <field:select field="givenAuthorities" id="c_com_rentistry_domain_RentUser_givenAuthorities" itemValue="id" items="${authoritys}" multiple="true" path="/authoritys" z="kC9g4BSm0GmMz00kkt6T12+0j1c="/>
+        <field:input field="password" id="c_com_rentistry_domain_RentUser_password" z="r2d/mfimkvZAQ39iUmvvukrbtJ0="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_rentistry_domain_RentUser" render="${not empty dependencies}" z="yoWq8+6naPGA0kLKr1y4ga4gcSY="/>
 </div>

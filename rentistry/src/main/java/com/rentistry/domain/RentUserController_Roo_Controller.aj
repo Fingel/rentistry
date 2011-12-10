@@ -4,6 +4,7 @@
 package com.rentistry.domain;
 
 import com.rentistry.domain.Account;
+import com.rentistry.domain.Authority;
 import com.rentistry.domain.RentUser;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
@@ -92,6 +93,11 @@ privileged aspect RentUserController_Roo_Controller {
     @ModelAttribute("accounts")
     public Collection<Account> RentUserController.populateAccounts() {
         return Account.findAllAccounts();
+    }
+    
+    @ModelAttribute("authoritys")
+    public Collection<Authority> RentUserController.populateAuthoritys() {
+        return Authority.findAllAuthoritys();
     }
     
     @ModelAttribute("rentusers")

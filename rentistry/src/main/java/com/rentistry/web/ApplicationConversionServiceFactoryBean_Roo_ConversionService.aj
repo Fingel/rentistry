@@ -3,6 +3,7 @@
 
 package com.rentistry.web;
 
+import com.rentistry.domain.Authority;
 import com.rentistry.domain.City;
 import com.rentistry.domain.Item;
 import com.rentistry.domain.ItemTag;
@@ -17,6 +18,30 @@ import org.springframework.format.FormatterRegistry;
 privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService {
     
     declare @type: ApplicationConversionServiceFactoryBean: @Configurable;
+    
+    public Converter<Authority, String> ApplicationConversionServiceFactoryBean.getAuthorityToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.rentistry.domain.Authority, java.lang.String>() {
+            public String convert(Authority authority) {
+                return new StringBuilder().append(authority.getName()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Authority> ApplicationConversionServiceFactoryBean.getIdToAuthorityConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.rentistry.domain.Authority>() {
+            public com.rentistry.domain.Authority convert(java.lang.Long id) {
+                return Authority.findAuthority(id);
+            }
+        };
+    }
+    
+    public Converter<String, Authority> ApplicationConversionServiceFactoryBean.getStringToAuthorityConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.rentistry.domain.Authority>() {
+            public com.rentistry.domain.Authority convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Authority.class);
+            }
+        };
+    }
     
     public Converter<City, String> ApplicationConversionServiceFactoryBean.getCityToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.rentistry.domain.City, java.lang.String>() {
@@ -117,7 +142,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<RentUser, String> ApplicationConversionServiceFactoryBean.getRentUserToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.rentistry.domain.RentUser, java.lang.String>() {
             public String convert(RentUser rentUser) {
-                return new StringBuilder().append(rentUser.getPassword()).append(" ").append(rentUser.getUserEmail()).append(" ").append(rentUser.getFirstName()).append(" ").append(rentUser.getLastName()).toString();
+                return new StringBuilder().append(rentUser.getUserEmail()).append(" ").append(rentUser.getFirstName()).append(" ").append(rentUser.getLastName()).append(" ").append(rentUser.getPassword()).toString();
             }
         };
     }
@@ -139,6 +164,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     }
     
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
+        registry.addConverter(getAuthorityToStringConverter());
+        registry.addConverter(getIdToAuthorityConverter());
+        registry.addConverter(getStringToAuthorityConverter());
         registry.addConverter(getCityToStringConverter());
         registry.addConverter(getIdToCityConverter());
         registry.addConverter(getStringToCityConverter());

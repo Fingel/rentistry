@@ -4,9 +4,11 @@
 package com.rentistry.domain;
 
 import com.rentistry.domain.Account;
+import com.rentistry.domain.Authority;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Collection;
+import java.util.Set;
 import org.springframework.security.core.GrantedAuthority;
 
 privileged aspect RentUser_Roo_JavaBean {
@@ -33,6 +35,10 @@ privileged aspect RentUser_Roo_JavaBean {
     
     public void RentUser.setLastName(String lastName) {
         this.lastName = lastName;
+    }
+    
+    public String RentUser.getPassword() {
+        return this.password;
     }
     
     public void RentUser.setPassword(String password) {
@@ -85,6 +91,14 @@ privileged aspect RentUser_Roo_JavaBean {
     
     public void RentUser.setAccount(Account account) {
         this.account = account;
+    }
+    
+    public Set<Authority> RentUser.getGivenAuthorities() {
+        return this.givenAuthorities;
+    }
+    
+    public void RentUser.setGivenAuthorities(Set<Authority> givenAuthorities) {
+        this.givenAuthorities = givenAuthorities;
     }
     
 }

@@ -27,5 +27,9 @@
             <menu:item id="i_rentuser_new" messageCode="global_menu_new" url="/rentusers?form" z="bV6kRXCJCqUR6yPc8HfiFjn7p7A="/>
             <menu:item id="i_rentuser_list" messageCode="global_menu_list" url="/rentusers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="HBM2wz+UnMhB2lx/yNNGs3b/RHg="/>
         </menu:category>
+        <menu:category id="c_authority" z="GIU2CEy7lITDknErfBZQNPQ7WFs=">
+            <menu:item id="i_authority_new" messageCode="global_menu_new" url="/authoritys?form" z="/7YzNX8tdj/Mea7IbryfB4TtHN8="/>
+            <menu:item id="i_authority_list" messageCode="global_menu_list" url="/authoritys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="KoNMAjv7I2DALzQEzYF1AO4FR+E="/>
+        </menu:category>
     </menu:menu>
 </div>

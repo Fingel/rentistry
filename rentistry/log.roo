@@ -90,3 +90,34 @@ exit
 perform eclipse
 exit
 // Spring Roo 1.2.0.M1 [rev 1fa252f] log closed at 2011-12-01 12:02:00
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2011-12-02 13:03:06
+focus --class com.rentistry.domain.RentUser
+entity --class ~.domain.Authority
+field string --fieldName name
+focus --class ~.domain.RentUser
+field set --fieldName givenAuthorities --type com.rentistry.domain.Authority --cardinality MANY_TO_MANY
+focus --class ~.domain.Authority
+field set --fieldName rentUsers --type ~.domain.RentUser --cardinality MANY_TO_MANY --mappedBy givenAuthorities
+web mvc scaffold --class com.rentistry.domain.Authority
+web mvc scaffold --class com.rentistry.domain.AuthorityController
+poll now
+// [failed] web mvc scaffold --class com.rentistry.web.AuthorityController
+web mvc scaffold --class com.rentistry.web.AuthorityController
+// [failed] web mvc all --package com.rentistry.web
+exit
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log closed at 2011-12-02 13:15:59
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2011-12-02 13:16:19
+focus --class ~.domain.Authority
+web mvc scaffold --class com.rentistry.web.AuthorityController
+web mvc all --package com.rentistry.web
+poll now
+web mvc all --package com.rentistry.web
+exit
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log closed at 2011-12-02 13:24:25
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2011-12-02 13:24:30
+exit
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log closed at 2011-12-02 13:25:04
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2011-12-02 13:25:08
+exit
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log closed at 2011-12-02 13:37:37
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2011-12-09 12:58:47

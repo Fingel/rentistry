@@ -12,20 +12,16 @@ privileged aspect RentUser_Roo_ToString {
         sb.append("Account: ").append(getAccount()).append(", ");
         sb.append("AccountExpired: ").append(getAccountExpired()).append(", ");
         sb.append("AccountLocked: ").append(getAccountLocked()).append(", ");
-        sb.append("Authorities: ").append(getAuthorities() == null ? "null" : getAuthorities().size()).append(", ");
         sb.append("CredentialsExpired: ").append(getCredentialsExpired()).append(", ");
         sb.append("Enabled: ").append(getEnabled()).append(", ");
         sb.append("FirstName: ").append(getFirstName()).append(", ");
+        sb.append("GivenAuthorities: ").append(getGivenAuthorities() == null ? "null" : getGivenAuthorities().size()).append(", ");
         sb.append("GrantedAuthorities: ").append(getGrantedAuthorities() == null ? "null" : getGrantedAuthorities().size()).append(", ");
         sb.append("Id: ").append(getId()).append(", ");
         sb.append("LastName: ").append(getLastName()).append(", ");
         sb.append("Password: ").append(getPassword()).append(", ");
         sb.append("UserEmail: ").append(getUserEmail()).append(", ");
-        sb.append("Username: ").append(getUsername()).append(", ");
-        sb.append("Version: ").append(getVersion()).append(", ");
-        sb.append("AccountNonExpired: ").append(isAccountNonExpired()).append(", ");
-        sb.append("AccountNonLocked: ").append(isAccountNonLocked()).append(", ");
-        sb.append("CredentialsNonExpired: ").append(isCredentialsNonExpired());
+        sb.append("Version: ").append(getVersion());
         return sb.toString();
     }
     

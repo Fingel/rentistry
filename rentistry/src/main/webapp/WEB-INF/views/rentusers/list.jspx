@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_com_rentistry_domain_RentUser" items="${rentusers}" z="gFDWVaH1aX9IKmmAAwF7UZqzYdk=">
         <table:table data="${rentusers}" id="l_com_rentistry_domain_RentUser" path="/rentusers" z="DZxYMzEQngsr8kRNCvfkHLBd7zI=">
-            <table:column id="c_com_rentistry_domain_RentUser_password" property="password" z="MhKtZj1T1P+2RHAznc8QBZJiTHY="/>
             <table:column id="c_com_rentistry_domain_RentUser_enabled" property="enabled" z="qo7SeFfhLcENLJWlXENnrPP8BBo="/>
             <table:column id="c_com_rentistry_domain_RentUser_userEmail" property="userEmail" z="KmpWAgc11Wc0H/DZeDdzkLedUVA="/>
             <table:column id="c_com_rentistry_domain_RentUser_firstName" property="firstName" z="IqxBn/jcXjDnSZwAUB2oAu9iaTg="/>
             <table:column id="c_com_rentistry_domain_RentUser_lastName" property="lastName" z="Og87ot9HGmlDMTUECSEsfYBjuSg="/>
             <table:column id="c_com_rentistry_domain_RentUser_accountExpired" property="accountExpired" z="uRW18QF97KKz3/1LSceMN30sfyc="/>
+            <table:column id="c_com_rentistry_domain_RentUser_password" property="password" z="MhKtZj1T1P+2RHAznc8QBZJiTHY="/>
         </table:table>
     </page:list>
 </div>

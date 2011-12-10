@@ -4,8 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_com_rentistry_domain_Item" object="${item}" path="/items" z="Oh8Wn2AYfQBzbkvb2fXgSTLnC9M=">
         <field:display field="region" id="s_com_rentistry_domain_Item_region" object="${item}" z="JF/Vkwh8OSY0Xm8AFV8hIo8L4U4="/>
-        <!--         <field:display field="providedBy[0]" id="s_com_rentistry_domain_Item_providedBy" object="${item}" z="FrdTJn9opPx8woA+LPnAvHTRbnc="/> -->
-        <!--         <field:display field="requestedBy[0]" id="s_com_rentistry_domain_Item_requestedBy" object="${item}" z="IGem+UBwYGC/wS+TWpkGONA1rxA="/> -->
 		Provided by: ${item.providedBy}
 		
         <field:display field="available" id="s_com_rentistry_domain_Item_available" object="${item}" z="dQKdWtUOA+T1K+bcZms/pQOopeY="/>

@@ -13,7 +13,7 @@ public class UserManager implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username)
 			throws UsernameNotFoundException, DataAccessException {
 		RentUser user = RentUser.findUserByUserEmail(username);
-		return user;
+		return new SessionUser(user);
 	}
 	
 
