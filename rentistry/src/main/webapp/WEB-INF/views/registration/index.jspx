@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:form="http://www.springframework.org/tags/form" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <jsp:output omit-xml-declaration="yes"/>
+  <spring:message code="label_registration_index" htmlEscape="false" var="title"/>
+  <spring:url var="post_url" value="/registration"/>
+  <spring:url var="cancel_url" value="/"/>
+  <util:panel id="title" title="${title}">
+    <spring:message code="application_name" htmlEscape="false" var="app_name"/>
+    <div id="fullwrap">
+    <div id="contentwrap">
+	
+	 <div id="contenthead">
+    <h1>Register for Rentistry</h1>
+    </div>
+    <div id="contentstuff">
+	<p>Please provide the following details to register for Rentistry. Note that when logging in, your email will act as your username. Please provide accurate information for the best 
+	experience using Rentistry.</p>
+    <form:form action="${post_url}" commandName="regBean" method="POST">
+    <form:label path="userEmail">Email:</form:label> <form:input path="userEmail" required="required"/> <br/><br/>
+    <form:label path="firstName">First Name:</form:label> <form:input path="firstName" required="required"/> <br/><br/>
+    <form:label path="lastName">Last Name : </form:label><form:input path="lastName" required="required"/> <br/><br/>
+    <form:label path="password">Password: </form:label><form:password path="password" required="required" /><br/><br/><br/>
+    <!-- CAPTCHA STUFF -->
+    <script type="text/javascript" src="http://api.recaptcha.net/challenge?k=6LekH8sSAAAAAIncvpfcv4QFZM7jpLxG5ZItMbjE"></script>  
+    <input type="submit" value="Submit"/>&#160;&#160;&#160;<input type="button" value="Cancel" onClick="window.location.href='${cancel_url}'"/>
+    </form:form>
+		<div id="divend">
+	
+			
+		</div>
+			
+		<!-- MAIN CONTENT ITEMS END -->
+	
+	 </div>
+	 
+	</div>
+
+    </div>
+  </util:panel>
+</div>

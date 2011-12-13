@@ -6,6 +6,7 @@
   <spring:url var="home" value="/" />
   <spring:url var="login" value="/login"/>
   <spring:url value="/resources/j_spring_security_logout" var="logout"/>
+  <spring:url var="register" value="/registration"/>
   <spring:message code="button_home" var="home_label" htmlEscape="false" />
   <div id="titlewrap">
 	  <a href="${home}" name="${fn:escapeXml(home_label)}" title="${fn:escapeXml(home_label)}">

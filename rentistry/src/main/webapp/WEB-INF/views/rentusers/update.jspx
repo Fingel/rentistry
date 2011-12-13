@@ -11,7 +11,7 @@
         <field:checkbox field="credentialsExpired" id="c_com_rentistry_domain_RentUser_credentialsExpired" z="CZTQ+raLIWXvxCTy8VcwO3AHZPA="/>
         <field:checkbox field="accountLocked" id="c_com_rentistry_domain_RentUser_accountLocked" z="aVzpNru03y4WU3WLUXHAz0zX11w="/>
         <field:select field="account" id="c_com_rentistry_domain_RentUser_account" itemValue="id" items="${accounts}" path="/accounts" z="+mFFBxy8A4g3hZqOfcsGXDSE/8g="/>
-        <field:input field="grantedAuthorities" id="c_com_rentistry_domain_RentUser_grantedAuthorities" render="false" z="7TTIpkBgyXbh4PFgywXkpYGuR0A="/>
+        <field:input field="grantedAuthorities" id="c_com_rentistry_domain_RentUser_grantedAuthorities" render="false" z="user-managed"/>
         <field:select field="givenAuthorities" id="c_com_rentistry_domain_RentUser_givenAuthorities" itemValue="id" items="${authoritys}" multiple="true" path="/authoritys" z="kC9g4BSm0GmMz00kkt6T12+0j1c="/>
         <field:input field="password" id="c_com_rentistry_domain_RentUser_password" z="r2d/mfimkvZAQ39iUmvvukrbtJ0="/>
     </form:update>

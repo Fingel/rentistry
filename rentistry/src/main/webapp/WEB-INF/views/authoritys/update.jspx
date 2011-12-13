@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_rentistry_domain_Authority" modelAttribute="authority" path="/authoritys" versionField="Version" z="1VYZ5HRxb2EoRib+SXuQcGL99Jg=">
+        <field:input field="name" id="c_com_rentistry_domain_Authority_name" z="1gxKKPtMxv0SXk+GHJOyHQ+E3kA="/>
+        <field:select field="rentUsers" id="c_com_rentistry_domain_Authority_rentUsers" itemValue="id" items="${rentusers}" multiple="true" path="/rentusers" z="c09ikhg4+SIxRBGgR0ZC4DNGC7Y="/>
+    </form:update>
+</div>
