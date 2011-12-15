@@ -1056,4 +1056,7 @@ fieldset th {
 .dijitCheckBoxInput {
     opacity: 1 !important;
 }
-	
+
+.error {
+	color: red;
+}

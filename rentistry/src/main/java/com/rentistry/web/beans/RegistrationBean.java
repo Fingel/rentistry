@@ -6,6 +6,9 @@ public class RegistrationBean {
 	private String firstName;
 	private String lastName;
 	private String password;
+	private String robotAnswer;
+	private String aboutMe;
+	private byte[] avatar;
 	
 	public String getUserEmail() {
 		return userEmail;
@@ -30,6 +33,24 @@ public class RegistrationBean {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public String getRobotAnswer() {
+		return robotAnswer;
+	}
+	public void setRobotAnswer(String robotAnswer) {
+		this.robotAnswer = robotAnswer;
+	}
+	public String getAboutMe() {
+		return aboutMe;
+	}
+	public void setAboutMe(String aboutMe) {
+		this.aboutMe = aboutMe;
+	}
+	public byte[] getAvatar() {
+		return avatar;
+	}
+	public void setAvatar(byte[] avatar) {
+		this.avatar = avatar;
 	}
 
 }

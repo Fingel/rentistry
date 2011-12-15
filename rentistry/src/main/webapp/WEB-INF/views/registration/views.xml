@@ -4,4 +4,7 @@
     <definition extends="public" name="registration/index">
         <put-attribute name="body" value="/WEB-INF/views/registration/index.jspx"/>
     </definition>
+    <definition extends="public" name="registration/setupComplete">
+        <put-attribute name="body" value="/WEB-INF/views/registration/setupComplete.jspx"/>
+    </definition>
 </tiles-definitions>

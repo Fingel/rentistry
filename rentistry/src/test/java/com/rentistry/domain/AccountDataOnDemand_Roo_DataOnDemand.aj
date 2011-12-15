@@ -5,6 +5,7 @@ package com.rentistry.domain;
 
 import com.rentistry.domain.Account;
 import com.rentistry.domain.Region;
+import java.lang.String;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -24,8 +25,20 @@ privileged aspect AccountDataOnDemand_Roo_DataOnDemand {
     
     public Account AccountDataOnDemand.getNewTransientAccount(int index) {
         Account obj = new Account();
+        setAboutMe(obj, index);
+        setAvatar(obj, index);
         setDefaultRegion(obj, index);
         return obj;
+    }
+    
+    public void AccountDataOnDemand.setAboutMe(Account obj, int index) {
+        String aboutMe = "aboutMe_" + index;
+        obj.setAboutMe(aboutMe);
+    }
+    
+    public void AccountDataOnDemand.setAvatar(Account obj, int index) {
+        byte[] avatar = String.valueOf(index).getBytes();
+        obj.setAvatar(avatar);
     }
     
     public void AccountDataOnDemand.setDefaultRegion(Account obj, int index) {

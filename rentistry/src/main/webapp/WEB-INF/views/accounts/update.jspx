@@ -6,5 +6,7 @@
         <field:select field="defaultRegion" id="c_com_rentistry_domain_Account_defaultRegion" itemValue="id" items="${regions}" path="/regions" z="LRvJ/5gEZcuEGgq2j9EPDZQPOyI="/>
         <field:simple field="providing" id="c_com_rentistry_domain_Account_providing" messageCode="entity_reference_not_managed" messageCodeAttribute="Item" z="ZN0Nf74YTqC7jTS8BWNjysxAEyE="/>
         <field:select field="requesting" id="c_com_rentistry_domain_Account_requesting" itemValue="id" items="${items}" multiple="true" path="/items" z="2R57oUTqmvZFk0bjzCHPswDdlFE="/>
+        <field:input field="aboutMe" id="c_com_rentistry_domain_Account_aboutMe" z="c8kiWjmKsN2TnMU277XfZI+E3wU="/>
+        <field:textarea field="avatar" id="c_com_rentistry_domain_Account_avatar" render="false" z="sigEGlhoNZVTSGlCk1FJvqSEfR4="/>
     </form:update>
 </div>

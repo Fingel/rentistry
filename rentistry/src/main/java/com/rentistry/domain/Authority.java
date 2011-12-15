@@ -11,7 +11,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooEntity
+@RooEntity(finders = { "findAuthoritysByNameEquals" })
 public class Authority {
 
     @Column(unique = true, updatable = false)

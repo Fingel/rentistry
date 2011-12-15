@@ -14,15 +14,21 @@
     <h1>Register for Rentistry</h1>
     </div>
     <div id="contentstuff">
+    <span class="error"><b>${errors}</b></span><br/>
 	<p>Please provide the following details to register for Rentistry. Note that when logging in, your email will act as your username. Please provide accurate information for the best 
 	experience using Rentistry.</p>
-    <form:form action="${post_url}" commandName="regBean" method="POST">
+    <form:form action="${post_url}" commandName="regBean" method="POST" enctype="multipart/form-data">
     <form:label path="userEmail">Email:</form:label> <form:input path="userEmail" required="required"/> <br/><br/>
     <form:label path="firstName">First Name:</form:label> <form:input path="firstName" required="required"/> <br/><br/>
     <form:label path="lastName">Last Name : </form:label><form:input path="lastName" required="required"/> <br/><br/>
     <form:label path="password">Password: </form:label><form:password path="password" required="required" /><br/><br/><br/>
+    <b>Optional Stuff:</b><br/><br/>
+    <label for="avatar">Profile Image:</label><input name="avatar" id="avatar" type="file" onchange="check_image();"/><br/><br/>
+    <form:hidden path="imageType"/>
+    <form:label path="aboutMe">About yourself:</form:label><br/><form:textarea cols="50"  path="aboutMe"/><br/><br/>
+    <b>Are you a robot?</b> Answer this so we can be sure:<br/><br/>
+    How many letters does the word "human" contain?<br/><form:input path="robotAnswer" required="required"/><br/><br/>
     <!-- CAPTCHA STUFF -->
-    <script type="text/javascript" src="http://api.recaptcha.net/challenge?k=6LekH8sSAAAAAIncvpfcv4QFZM7jpLxG5ZItMbjE"></script>  
     <input type="submit" value="Submit"/>&#160;&#160;&#160;<input type="button" value="Cancel" onClick="window.location.href='${cancel_url}'"/>
     </form:form>
 		<div id="divend">
@@ -38,4 +44,29 @@
 
     </div>
   </util:panel>
+  <script type="text/javascript">
+  function check_image()
+  {
+  	var imgpath = document.getElementById('avatar').value;
+  	if(imgpath != "")
+  	{
+	  // code to get File Extension..
+	  var arr1 = new Array;
+	  arr1 = imgpath.split("\\");
+	  var len = arr1.length;
+	  var img1 = arr1[len-1];
+	  var filext = img1.substring(img1.lastIndexOf(".")+1);
+	  // Checking Extension
+  		if(filext == "jpg" || filext == "jpeg" || filext == "gif" || filext == "png")
+  			document.getElementById('imgUser').src = imgpath;
+	  		document.getElementById('imageType').value = filext;
+  		else
+  		{
+		  alert("Invalid File Format Selected. Allowed types: jpg, jpeg, gif, png.");
+		  document.getElementById('avatar').value = "";
+  			return false;
+  		}
+  	}
+  }
+  </script>
 </div>

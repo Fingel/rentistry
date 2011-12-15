@@ -5,6 +5,7 @@ package com.rentistry.domain;
 
 import com.rentistry.domain.Item;
 import com.rentistry.domain.Region;
+import java.lang.String;
 import java.util.Set;
 
 privileged aspect Account_Roo_JavaBean {
@@ -31,6 +32,14 @@ privileged aspect Account_Roo_JavaBean {
     
     public void Account.setRequesting(Set<Item> requesting) {
         this.requesting = requesting;
+    }
+    
+    public String Account.getAboutMe() {
+        return this.aboutMe;
+    }
+    
+    public void Account.setAboutMe(String aboutMe) {
+        this.aboutMe = aboutMe;
     }
     
 }

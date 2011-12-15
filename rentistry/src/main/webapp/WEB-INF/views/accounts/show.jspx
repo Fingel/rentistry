@@ -5,5 +5,7 @@
     <page:show id="ps_com_rentistry_domain_Account" object="${account}" path="/accounts" z="+roIwCXBGrJ3j/VHZqWv7mCIVkg=">
         <field:display field="defaultRegion" id="s_com_rentistry_domain_Account_defaultRegion" object="${account}" z="7BoRgQ0WOxs6AtyXSNP2xSSATlo="/>
         <field:display field="requesting" id="s_com_rentistry_domain_Account_requesting" object="${account}" z="AaLScue6GRGtwELBNVCqUinIRzw="/>
+        <field:display field="aboutMe" id="s_com_rentistry_domain_Account_aboutMe" object="${account}" z="0akJrT1AeIzGxqPbdWMJ7DTsvj8="/>
+        <field:display field="avatar" id="s_com_rentistry_domain_Account_avatar" render="false" object="${account}" z="uJ/IbekGi70wBbtWfWxK/Y+GcXU="/>
     </page:show>
 </div>

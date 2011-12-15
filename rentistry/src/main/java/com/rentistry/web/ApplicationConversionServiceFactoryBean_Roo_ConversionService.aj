@@ -3,6 +3,7 @@
 
 package com.rentistry.web;
 
+import com.rentistry.domain.Account;
 import com.rentistry.domain.Authority;
 import com.rentistry.domain.City;
 import com.rentistry.domain.Item;
@@ -18,6 +19,30 @@ import org.springframework.format.FormatterRegistry;
 privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService {
     
     declare @type: ApplicationConversionServiceFactoryBean: @Configurable;
+    
+    public Converter<Account, String> ApplicationConversionServiceFactoryBean.getAccountToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.rentistry.domain.Account, java.lang.String>() {
+            public String convert(Account account) {
+                return new StringBuilder().append(account.getAboutMe()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Account> ApplicationConversionServiceFactoryBean.getIdToAccountConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.rentistry.domain.Account>() {
+            public com.rentistry.domain.Account convert(java.lang.Long id) {
+                return Account.findAccount(id);
+            }
+        };
+    }
+    
+    public Converter<String, Account> ApplicationConversionServiceFactoryBean.getStringToAccountConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.rentistry.domain.Account>() {
+            public com.rentistry.domain.Account convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Account.class);
+            }
+        };
+    }
     
     public Converter<Authority, String> ApplicationConversionServiceFactoryBean.getAuthorityToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.rentistry.domain.Authority, java.lang.String>() {
@@ -164,6 +189,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     }
     
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
+        registry.addConverter(getAccountToStringConverter());
+        registry.addConverter(getIdToAccountConverter());
+        registry.addConverter(getStringToAccountConverter());
         registry.addConverter(getAuthorityToStringConverter());
         registry.addConverter(getIdToAuthorityConverter());
         registry.addConverter(getStringToAuthorityConverter());
