@@ -7,7 +7,8 @@
             <table:column id="c_com_rentistry_domain_Account_defaultRegion" property="defaultRegion" z="MCvGEdc9W0Ig9sNwtvTbPixhg1Q="/>
             <table:column id="c_com_rentistry_domain_Account_requesting" property="requesting" z="nITiTDKwnW3Bs1PBxlX++VSrReM="/>
             <table:column id="c_com_rentistry_domain_Account_aboutMe" property="aboutMe" z="ALlSmmc9XhCV18BROx8PglY4NVk="/>
-            <table:column id="c_com_rentistry_domain_Account_avatar" property="avatar" render="false" z="2QfyXXdKu6QKH4xvWFLWPJigjag="/>
+            <table:column id="c_com_rentistry_domain_Account_avatar" property="avatar" render="false" z="user-managed"/>
+            <table:column id="c_com_rentistry_domain_Account_avatarKey" property="avatarKey" z="hrW/NmwiGUJic5cHNJufd18Txso="/>
         </table:table>
     </page:list>
 </div>

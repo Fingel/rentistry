@@ -42,4 +42,12 @@ privileged aspect Account_Roo_JavaBean {
         this.aboutMe = aboutMe;
     }
     
+    public String Account.getAvatarKey() {
+        return this.avatarKey;
+    }
+    
+    public void Account.setAvatarKey(String avatarKey) {
+        this.avatarKey = avatarKey;
+    }
+    
 }

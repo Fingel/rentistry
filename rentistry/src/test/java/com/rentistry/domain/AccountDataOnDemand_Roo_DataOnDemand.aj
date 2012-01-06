@@ -26,7 +26,7 @@ privileged aspect AccountDataOnDemand_Roo_DataOnDemand {
     public Account AccountDataOnDemand.getNewTransientAccount(int index) {
         Account obj = new Account();
         setAboutMe(obj, index);
-        setAvatar(obj, index);
+        setAvatarKey(obj, index);
         setDefaultRegion(obj, index);
         return obj;
     }
@@ -36,9 +36,9 @@ privileged aspect AccountDataOnDemand_Roo_DataOnDemand {
         obj.setAboutMe(aboutMe);
     }
     
-    public void AccountDataOnDemand.setAvatar(Account obj, int index) {
-        byte[] avatar = String.valueOf(index).getBytes();
-        obj.setAvatar(avatar);
+    public void AccountDataOnDemand.setAvatarKey(Account obj, int index) {
+        String avatarKey = "avatarKey_" + index;
+        obj.setAvatarKey(avatarKey);
     }
     
     public void AccountDataOnDemand.setDefaultRegion(Account obj, int index) {

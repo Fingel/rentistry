@@ -1,14 +1,27 @@
 package com.rentistry.web.beans;
 
+import javax.persistence.Transient;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
+
+import com.rentistry.services.io.FileService;
+
 public class RegistrationBean {
 	
+	@Autowired
+	private FileService fileService;
+	
+	@Transient
+	private CommonsMultipartFile file;
+	
+	private String fileName;
 	private String userEmail;
 	private String firstName;
 	private String lastName;
 	private String password;
 	private String robotAnswer;
 	private String aboutMe;
-	private byte[] avatar;
 	
 	public String getUserEmail() {
 		return userEmail;
@@ -46,11 +59,23 @@ public class RegistrationBean {
 	public void setAboutMe(String aboutMe) {
 		this.aboutMe = aboutMe;
 	}
-	public byte[] getAvatar() {
-		return avatar;
+	public FileService getFileService() {
+		return fileService;
 	}
-	public void setAvatar(byte[] avatar) {
-		this.avatar = avatar;
+	public void setFileService(FileService fileService) {
+		this.fileService = fileService;
+	}
+	public CommonsMultipartFile getFile() {
+		return file;
+	}
+	public void setFile(CommonsMultipartFile file) {
+		this.file = file;
+	}
+	public String getFileName() {
+		return fileName;
+	}
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
 	}
 
 }

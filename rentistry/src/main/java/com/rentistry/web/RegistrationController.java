@@ -1,5 +1,6 @@
 package com.rentistry.web;
 
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,10 +21,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
 
+import com.rentistry.services.io.FileService;
 import com.rentistry.domain.Account;
 import com.rentistry.domain.Authority;
 import com.rentistry.domain.Region;
 import com.rentistry.domain.RentUser;
+import com.rentistry.services.io.FileId;
+import com.rentistry.services.io.FileStorage;
 import com.rentistry.web.beans.RegistrationBean;
 
 @RequestMapping("/registration/**")
@@ -32,6 +36,9 @@ public class RegistrationController {
 	
 	@Autowired
 	PasswordEncoder passwordEncoder;
+	
+	@Autowired
+	FileService fileService;
 
     @RequestMapping(method = RequestMethod.GET)
     public String get(ModelMap modelMap, HttpServletRequest request, HttpServletResponse response) {
@@ -66,14 +73,25 @@ public class RegistrationController {
     	user.setAccountLocked(false);
     	user.setCredentialsExpired(false);
     	user.setEnabled(true);
-    	user.persist();
+    	
     	    	
     	Account account = new Account();
     	account.setAboutMe(regBean.getAboutMe());
-    	account.setAvatar(regBean.getAvatar());
     	
     	//TODO hardcode fairfax for now.
     	account.setDefaultRegion(Region.findRegion(1L));
+    	
+    	//upload avatar to fileservice
+    	FileId fileId = FileId.createFileId(FileStorage.AVATAR, regBean.getFileName());
+    	account.setAvatarKey(fileId.getFileKey());
+    	try {
+			fileService.writeFile(fileId, regBean.getFile().getInputStream(), regBean.getFile().getSize(), regBean.getFile().getContentType());
+		} catch (IOException e) {
+			modelMap.addAttribute("regBean", regBean);
+			modelMap.addAttribute("errors", "Problem with file upload");
+			return "registration/index";
+		}
+    	user.persist();
     	account.persist();
     	user.setAccount(account);
     	user.merge();

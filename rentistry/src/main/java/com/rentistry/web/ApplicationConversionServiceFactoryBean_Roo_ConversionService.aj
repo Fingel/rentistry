@@ -23,7 +23,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Account, String> ApplicationConversionServiceFactoryBean.getAccountToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.rentistry.domain.Account, java.lang.String>() {
             public String convert(Account account) {
-                return new StringBuilder().append(account.getAboutMe()).toString();
+                return new StringBuilder().append(account.getAboutMe()).append(" ").append(account.getAvatarKey()).toString();
             }
         };
     }

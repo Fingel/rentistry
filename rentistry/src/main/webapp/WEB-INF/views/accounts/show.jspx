@@ -6,6 +6,7 @@
         <field:display field="defaultRegion" id="s_com_rentistry_domain_Account_defaultRegion" object="${account}" z="7BoRgQ0WOxs6AtyXSNP2xSSATlo="/>
         <field:display field="requesting" id="s_com_rentistry_domain_Account_requesting" object="${account}" z="AaLScue6GRGtwELBNVCqUinIRzw="/>
         <field:display field="aboutMe" id="s_com_rentistry_domain_Account_aboutMe" object="${account}" z="0akJrT1AeIzGxqPbdWMJ7DTsvj8="/>
-        <field:display field="avatar" id="s_com_rentistry_domain_Account_avatar" render="false" object="${account}" z="uJ/IbekGi70wBbtWfWxK/Y+GcXU="/>
+        <field:display field="avatar" id="s_com_rentistry_domain_Account_avatar" object="${account}" render="false" z="user-managed"/>
+        <field:display field="avatarKey" id="s_com_rentistry_domain_Account_avatarKey" object="${account}" z="Eak2n3OTQhxHwG3nCo2BaGMfghU="/>
     </page:show>
 </div>

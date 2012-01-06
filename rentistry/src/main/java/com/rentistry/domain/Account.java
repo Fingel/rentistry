@@ -3,19 +3,25 @@ package com.rentistry.domain;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Lob;
+
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Transient;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.tostring.RooToString;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
+
+import com.rentistry.services.io.FileService;
 
 @RooJavaBean
 @RooToString
 @RooEntity
 public class Account {
+	
 
     @ManyToOne
     private Region defaultRegion;
@@ -28,18 +34,10 @@ public class Account {
 
     private String aboutMe;
     
-    @Lob
-    private byte[] avatar;
+    private String avatarKey;
 
     public String toString() {
         return this.defaultRegion.getCities().iterator().next().getName();
     }
 
-	public byte[] getAvatar() {
-		return avatar;
-	}
-
-	public void setAvatar(byte[] avatar) {
-		this.avatar = avatar;
-	}
 }

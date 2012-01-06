@@ -85,5 +85,11 @@
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
     <!-- one of the properties available; the maximum file size in bytes -->
     <property name="maxUploadSize" value="100000"/>
-</bean>
+    </bean>
+    
+    <bean id="fileService" class="com.rentistry.services.io.AmazonFileService" scope="singleton">
+    	<property name="credPath" value="/META-INF/amazon/creds.properties"/>
+    	<property name="downloadURLLife" value="5"/>
+    	<property name="bucketPrefix" value="rentistry"/>
+	</bean>
 </beans>
