@@ -1060,3 +1060,13 @@ fieldset th {
 .error {
 	color: red;
 }
+
+.avatar{
+	border : 1px solid #fff;
+}
+
+#avatar_div{
+	float: right;
+    margin-right: 20px;
+    margin-top: 17px;
+}

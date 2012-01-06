@@ -8,7 +8,8 @@
             <table:column id="c_com_rentistry_domain_Account_requesting" property="requesting" z="nITiTDKwnW3Bs1PBxlX++VSrReM="/>
             <table:column id="c_com_rentistry_domain_Account_aboutMe" property="aboutMe" z="ALlSmmc9XhCV18BROx8PglY4NVk="/>
             <table:column id="c_com_rentistry_domain_Account_avatar" property="avatar" render="false" z="user-managed"/>
-            <table:column id="c_com_rentistry_domain_Account_avatarKey" property="avatarKey" z="hrW/NmwiGUJic5cHNJufd18Txso="/>
+            <table:column id="c_com_rentistry_domain_Account_fileService" property="fileService" z="uMNT5o7H8JK7RXFGc5/eR8cQZPc="/>
+            <table:column id="c_com_rentistry_domain_Account_avatarUrl" property="avatarUrl" z="n6uYXjMhsh0okS+yxFLwsN45GnU="/>
         </table:table>
     </page:list>
 </div>

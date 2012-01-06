@@ -9,6 +9,10 @@
         <field:input field="aboutMe" id="c_com_rentistry_domain_Account_aboutMe" z="c8kiWjmKsN2TnMU277XfZI+E3wU="/>
         <field:textarea field="avatar" id="c_com_rentistry_domain_Account_avatar" render="false" z="user-managed"/>
         <field:input field="avatarKey" id="c_com_rentistry_domain_Account_avatarKey" z="hcJlWCKFjTIaTUbXQTMNXV5iQeM="/>
+        <field:input field="avatarFileName" id="c_com_rentistry_domain_Account_avatarFileName" z="f3ge/gBnbIXtoNmsXk8miEFyYBY="/>
+        <field:input field="avatarUrl" id="c_com_rentistry_domain_Account_avatarUrl" z="+KJxSifHw2Ce/zTxKigr+7YTQsI="/>
+        <field:input field="fileService" id="c_com_rentistry_domain_Account_fileService" z="7FaGrsXtgjas7tAHh2oqHc83JdI="/>
+        <field:select field="rentUser" id="c_com_rentistry_domain_Account_rentUser" itemValue="id" items="${rentusers}" path="/rentusers" z="xb7A+N3ijVqy7JGtDcK9nc+cTS8="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_rentistry_domain_Account" render="${not empty dependencies}" z="KaONDAWbBe3d6olmXk+ivOiX3I8="/>
 </div>

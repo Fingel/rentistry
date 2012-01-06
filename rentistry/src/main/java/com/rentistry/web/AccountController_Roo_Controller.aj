@@ -6,6 +6,7 @@ package com.rentistry.web;
 import com.rentistry.domain.Account;
 import com.rentistry.domain.Item;
 import com.rentistry.domain.Region;
+import com.rentistry.domain.RentUser;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.Long;
@@ -103,6 +104,11 @@ privileged aspect AccountController_Roo_Controller {
     @ModelAttribute("regions")
     public Collection<Region> AccountController.populateRegions() {
         return Region.findAllRegions();
+    }
+    
+    @ModelAttribute("rentusers")
+    public Collection<RentUser> AccountController.populateRentUsers() {
+        return RentUser.findAllRentUsers();
     }
     
     String AccountController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

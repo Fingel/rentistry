@@ -52,7 +52,7 @@ public class RentUser {
     @ManyToMany(cascade = CascadeType.ALL, fetch=FetchType.EAGER)
     private Set<Authority> givenAuthorities = new HashSet<Authority>();
 
-    public static com.rentistry.domain.RentUser findUserByUserEmail(String userEmail) {
+    public static RentUser findUserByUserEmail(String userEmail) {
         if (userEmail == null || userEmail.length() == 0) throw new IllegalArgumentException("The userEmail argument is required");
         EntityManager em = RentUser.entityManager();
         Query q = em.createQuery("SELECT RentUser FROM RentUser AS rentuser WHERE rentuser.userEmail = :userEmail");

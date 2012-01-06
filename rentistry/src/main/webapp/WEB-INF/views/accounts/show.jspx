@@ -8,5 +8,9 @@
         <field:display field="aboutMe" id="s_com_rentistry_domain_Account_aboutMe" object="${account}" z="0akJrT1AeIzGxqPbdWMJ7DTsvj8="/>
         <field:display field="avatar" id="s_com_rentistry_domain_Account_avatar" object="${account}" render="false" z="user-managed"/>
         <field:display field="avatarKey" id="s_com_rentistry_domain_Account_avatarKey" object="${account}" z="Eak2n3OTQhxHwG3nCo2BaGMfghU="/>
+        <field:display field="avatarFileName" id="s_com_rentistry_domain_Account_avatarFileName" object="${account}" z="fJOFBBZoHkzqzbQvGGtRIdIRWuc="/>
+        <field:display field="avatarUrl" id="s_com_rentistry_domain_Account_avatarUrl" object="${account}" z="cpTkwiEfUXjuj4v1EdQHX7CZbJE="/>
+        <field:display field="fileService" id="s_com_rentistry_domain_Account_fileService" object="${account}" z="r9eL5KlX3fvXp5uzTxqR9N7rdWU="/>
+        <field:display field="rentUser" id="s_com_rentistry_domain_Account_rentUser" object="${account}" z="36vELIDrtJpHiiPHO+LW0xnQQZY="/>
     </page:show>
 </div>

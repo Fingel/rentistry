@@ -70,6 +70,7 @@ public class RegistrationBean {
 	}
 	public void setFile(CommonsMultipartFile file) {
 		this.file = file;
+		this.fileName=file.getOriginalFilename();
 	}
 	public String getFileName() {
 		return fileName;

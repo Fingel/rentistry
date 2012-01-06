@@ -1,5 +1,7 @@
 package com.rentistry.web;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
@@ -16,23 +18,26 @@ import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.ServletRequestDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
 
-import com.rentistry.services.io.FileService;
 import com.rentistry.domain.Account;
 import com.rentistry.domain.Authority;
 import com.rentistry.domain.Region;
 import com.rentistry.domain.RentUser;
 import com.rentistry.services.io.FileId;
+import com.rentistry.services.io.FileService;
 import com.rentistry.services.io.FileStorage;
+import com.rentistry.services.misc.ImageUtils;
 import com.rentistry.web.beans.RegistrationBean;
 
 @RequestMapping("/registration/**")
 @Controller
 public class RegistrationController {
+	
+	private static final int IMG_HEIGHT = 50;
+	private static final int IMG_WIDTH = 50;
 	
 	@Autowired
 	PasswordEncoder passwordEncoder;
@@ -66,7 +71,7 @@ public class RegistrationController {
     	user.setLastName(regBean.getLastName());
     	user.setUserEmail(regBean.getUserEmail());
     	user.setPassword(passwordEncoder.encodePassword(regBean.getPassword(), null));
-    	Set<Authority> authorities = new HashSet();
+    	Set<Authority> authorities = new HashSet<Authority>();
     	authorities.add((Authority.findAuthoritysByNameEquals("ROLE_USER").getSingleResult()));
     	user.setGivenAuthorities(authorities);
     	user.setAccountExpired(false);
@@ -84,13 +89,17 @@ public class RegistrationController {
     	//upload avatar to fileservice
     	FileId fileId = FileId.createFileId(FileStorage.AVATAR, regBean.getFileName());
     	account.setAvatarKey(fileId.getFileKey());
+    	account.setAvatarFileName(regBean.getFileName());
     	try {
-			fileService.writeFile(fileId, regBean.getFile().getInputStream(), regBean.getFile().getSize(), regBean.getFile().getContentType());
+    	File fileToUpload = ImageUtils.resizeUploadImage(regBean.getFile(),IMG_WIDTH, IMG_HEIGHT);
+			fileService.writeFile(fileId, new FileInputStream(fileToUpload), fileToUpload.length(), "image/png");
 		} catch (IOException e) {
 			modelMap.addAttribute("regBean", regBean);
 			modelMap.addAttribute("errors", "Problem with file upload");
 			return "registration/index";
 		}
+    	
+    	//dat persist
     	user.persist();
     	account.persist();
     	user.setAccount(account);

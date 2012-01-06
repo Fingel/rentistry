@@ -5,6 +5,7 @@ package com.rentistry.domain;
 
 import com.rentistry.domain.Item;
 import com.rentistry.domain.Region;
+import com.rentistry.domain.RentUser;
 import java.lang.String;
 import java.util.Set;
 
@@ -48,6 +49,26 @@ privileged aspect Account_Roo_JavaBean {
     
     public void Account.setAvatarKey(String avatarKey) {
         this.avatarKey = avatarKey;
+    }
+    
+    public String Account.getAvatarFileName() {
+        return this.avatarFileName;
+    }
+    
+    public void Account.setAvatarFileName(String avatarFileName) {
+        this.avatarFileName = avatarFileName;
+    }
+    
+    public RentUser Account.getRentUser() {
+        return this.rentUser;
+    }
+    
+    public void Account.setRentUser(RentUser rentUser) {
+        this.rentUser = rentUser;
+    }
+    
+    public void Account.setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
     }
     
 }

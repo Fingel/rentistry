@@ -23,8 +23,7 @@
     <form:label path="lastName">Last Name : </form:label><form:input path="lastName" required="required"/> <br/><br/>
     <form:label path="password">Password: </form:label><form:password path="password" required="required" /><br/><br/><br/>
     <b>Optional Stuff:</b><br/><br/>
-    <label for="avatar">Profile Image:</label><input name="avatar" id="avatar" type="file" onchange="check_image();"/><br/><br/>
-    <form:hidden path="imageType"/>
+    <label for="avatar">Profile Image:</label><input name="file" id="file" type="file" onchange="check_image();"/><br/><br/>
     <form:label path="aboutMe">About yourself:</form:label><br/><form:textarea cols="50"  path="aboutMe"/><br/><br/>
     <b>Are you a robot?</b> Answer this so we can be sure:<br/><br/>
     How many letters does the word "human" contain?<br/><form:input path="robotAnswer" required="required"/><br/><br/>
