@@ -141,3 +141,8 @@ focus --class ~.domain.Account
 finder list --class ~domain.Account
 finder list --class ~domain.Account
 finder add --finderName findAccountsByRentUser
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log closed at 2012-01-07 17:01:56
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2012-01-08 12:49:14
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log closed at 2012-01-08 12:59:07
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2012-01-08 13:19:50
+web mvc controller --class com.rentistry.web.manage.ManagementController

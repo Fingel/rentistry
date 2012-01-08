@@ -26,7 +26,7 @@
 	  <c:otherwise>
 	  	<span>
 	      <a href="${login}">
-	        <spring:message code="security_login"/> | <a href="${register}">Register</a>
+	        <spring:message code="security_login"/>
 	      </a>
 	    </span>
 	  </c:otherwise>

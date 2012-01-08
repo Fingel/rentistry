@@ -1,11 +1,21 @@
-<div xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<div xmlns:spring="http://www.springframework.org/tags" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8" />
   <jsp:output omit-xml-declaration="yes" />
   <spring:message var="app_name" code="application_name" htmlEscape="false" />
+  <spring:url var="manage_url" value="/management/index"/>
+  <spring:url var="register_url" value="/registration"/>
   <util:panel id="title" title="${title}">
   <div id="fullwrap">
   	<div id="splashnav">
-		<a href="">Home</a> | <a href="">Browse</a> | <a href="">About</a> 
+		<a href="">Home</a> | <a href="">Browse</a> | 
+		<c:choose>
+			<c:when test="${pageContext['request'].userPrincipal != null}">
+				<a href="${manage_url}">My Rentistry</a> 
+			</c:when>
+			<c:otherwise>
+				<a href="${register_url}">Register</a>
+			</c:otherwise>
+		</c:choose>
 	</div>
 	<div id="splaswrap">
 		<div id ="questionIndex">What are you looking for today?<br/>

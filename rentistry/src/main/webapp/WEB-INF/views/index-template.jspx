@@ -7,6 +7,17 @@
   <util:panel id="title" title="${title}">
     <spring:message code="application_name" htmlEscape="false" var="app_name"/>
     <div id="fullwrap">
+    <div id="splashnav">
+		<a href="">Home</a> | <a href="">Browse</a> | 
+		<c:choose>
+			<c:when test="${pageContext['request'].userPrincipal != null}">
+				<a href="${manage_url}">My Rentistry</a> 
+			</c:when>
+			<c:otherwise>
+				<a href="${register_url}">Register</a>
+			</c:otherwise>
+		</c:choose>
+	</div>
     <div id="contentwrap">
 	
 	 <div id="contenthead">
