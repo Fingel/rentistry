@@ -5,6 +5,7 @@ package com.rentistry.web;
 
 import com.rentistry.domain.Account;
 import com.rentistry.domain.Item;
+import com.rentistry.domain.ItemImage;
 import com.rentistry.domain.ItemTag;
 import com.rentistry.domain.Region;
 import java.io.UnsupportedEncodingException;
@@ -107,6 +108,11 @@ privileged aspect ItemController_Roo_Controller {
     @ModelAttribute("items")
     public Collection<Item> ItemController.populateItems() {
         return Item.findAllItems();
+    }
+    
+    @ModelAttribute("itemimages")
+    public Collection<ItemImage> ItemController.populateItemImages() {
+        return ItemImage.findAllItemImages();
     }
     
     @ModelAttribute("itemtags")

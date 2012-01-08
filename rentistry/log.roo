@@ -146,3 +146,13 @@ finder add --finderName findAccountsByRentUser
 // Spring Roo 1.2.0.M1 [rev 1fa252f] log closed at 2012-01-08 12:59:07
 // Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2012-01-08 13:19:50
 web mvc controller --class com.rentistry.web.manage.ManagementController
+web mvc controller --class com.rentistry.web.manage.UserItemController
+entity --class com.rentistry.domain.ItemImage
+field string fileKey
+field string fileName
+field string thumbFileName
+field string thumbFileKey
+// [failed] focus --class com.rentistry.domain.I
+focus --class com.rentistry.domain.Item
+field set --fieldName images --type com.rentistry.domain.ItemImage --cardinality ONE_TO_MANY 
+focus --class ~.domain.ItemImage

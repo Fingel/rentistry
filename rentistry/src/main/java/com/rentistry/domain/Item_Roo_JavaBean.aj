@@ -4,6 +4,7 @@
 package com.rentistry.domain;
 
 import com.rentistry.domain.Account;
+import com.rentistry.domain.ItemImage;
 import com.rentistry.domain.ItemTag;
 import com.rentistry.domain.Region;
 import java.lang.Boolean;
@@ -99,6 +100,14 @@ privileged aspect Item_Roo_JavaBean {
     
     public void Item.setTags(Set<ItemTag> tags) {
         this.tags = tags;
+    }
+    
+    public Set<ItemImage> Item.getImages() {
+        return this.images;
+    }
+    
+    public void Item.setImages(Set<ItemImage> images) {
+        this.images = images;
     }
     
 }

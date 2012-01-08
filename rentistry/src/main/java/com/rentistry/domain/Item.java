@@ -6,6 +6,7 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
@@ -49,4 +50,7 @@ public class Item {
 
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<ItemTag> tags = new HashSet<ItemTag>();
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<ItemImage> images = new HashSet<ItemImage>();
 }

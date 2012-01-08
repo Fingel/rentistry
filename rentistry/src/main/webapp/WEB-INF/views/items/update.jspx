@@ -14,5 +14,6 @@
         <field:input field="price" id="c_com_rentistry_domain_Item_price" z="H9d0ZKWE9qmWlxOzQnAg6chl5wg="/>
         <field:input field="priceInterval" id="c_com_rentistry_domain_Item_priceInterval" z="Gugy+1xmga7GjBzzE27xBTJCizk="/>
         <field:select field="tags" id="c_com_rentistry_domain_Item_tags" itemValue="id" items="${itemtags}" multiple="true" path="/itemtags" z="cU6k6Wn9tVFImnh9pmERNc5YbOA="/>
+        <field:simple field="images" id="c_com_rentistry_domain_Item_images" messageCode="entity_reference_not_managed" messageCodeAttribute="Item Image" z="imlcq22asV0ejL4kru2O1nws4Qw="/>
     </form:update>
 </div>

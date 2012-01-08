@@ -34,6 +34,7 @@
         <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
             <menu:item id="i_controller__registrationindex_id" messageCode="global_generic" url="/registration/index" z="8LJfKZNA6gSootutBZhLNnSGvJw="/>
             <menu:item id="i_controller__managementindex_id" messageCode="global_generic" url="/management/index" z="NGF5B4u9q3nvGs6QDtcm/NjcmrA="/>
+            <menu:item id="i_controller__useritemindex_id" messageCode="global_generic" url="/useritem/index" z="gbRAKrBkNWxcC4XbAjJyzVLUwJI="/>
         </menu:category>
     </menu:menu>
 </div>

@@ -13,6 +13,7 @@ privileged aspect Item_Roo_ToString {
         sb.append("Description: ").append(getDescription()).append(", ");
         sb.append("EndDate: ").append(getEndDate()).append(", ");
         sb.append("Id: ").append(getId()).append(", ");
+        sb.append("Images: ").append(getImages() == null ? "null" : getImages().size()).append(", ");
         sb.append("Name: ").append(getName()).append(", ");
         sb.append("Price: ").append(getPrice()).append(", ");
         sb.append("PriceInterval: ").append(getPriceInterval()).append(", ");
