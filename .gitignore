@@ -1,2 +1,3 @@
 rentistry/src/main/resources/META-INF/amazon/creds.properties
 rentistry/src/main/resources/META-INF/spring/database.properties
+rentistry/src/main/resources/META-INF/spring/email.properties
